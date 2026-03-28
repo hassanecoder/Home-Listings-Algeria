@@ -1,0 +1,22 @@
+packages:
+  "framer-motion": "For page transitions, scroll animations, and premium micro-interactions"
+  "react-hook-form": "For complex multi-step listing forms and contact forms"
+  "@hookform/resolvers": "For validating form data with Zod schemas"
+  "clsx": "For composing Tailwind classes dynamically"
+  "tailwind-merge": "For merging Tailwind classes without conflicts"
+  "embla-carousel-react": "For beautiful, swipeable image galleries on listing detail pages"
+
+images:
+  - path: "artifacts/darkom/public/images/hero-bg.png"
+    description: "Modern Mediterranean style living room with warm sunlight, earthy terracotta tones, deep blue accents, highly photorealistic architectural interior photography"
+    aspect_ratio: "16:9"
+  - path: "artifacts/darkom/public/images/about-team.png"
+    description: "Diverse professional real estate team in a modern sunlit Algiers office, warm lighting, approachable and trustworthy atmosphere"
+    aspect_ratio: "16:9"
+  - path: "artifacts/darkom/public/images/pattern-bg.png"
+    description: "Subtle arabesque geometric pattern in warm light sand color, elegant seamless texture for backgrounds"
+    aspect_ratio: "1:1"
+
+notes:
+  - Uses @workspace/api-client-react for TanStack Query hooks and generated types
+  - Uses standard REST approach based on OpenAPI spec provided in context
