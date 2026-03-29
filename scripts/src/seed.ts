@@ -349,14 +349,24 @@ const listings = [
 ];
 
 async function seed() {
-  console.log("Starting seed...");
+  const seedMode = process.env.SEED_MODE === "bootstrap" ? "bootstrap" : "reset";
+  console.log(`Starting seed in ${seedMode} mode...`);
 
-  // Clear existing data
-  console.log("Clearing existing data...");
-  await db.delete(messagesTable);
-  await db.delete(listingsTable);
-  await db.delete(categoriesTable);
-  await db.delete(wilayasTable);
+  if (seedMode === "bootstrap") {
+    const existing = await db.select().from(listingsTable).limit(1);
+    if (existing.length > 0) {
+      console.log("Bootstrap seed skipped; listings already present");
+      return;
+    }
+  }
+
+  if (seedMode === "reset") {
+    console.log("Clearing existing data...");
+    await db.delete(messagesTable);
+    await db.delete(listingsTable);
+    await db.delete(categoriesTable);
+    await db.delete(wilayasTable);
+  }
 
   // Insert wilayas
   console.log("Inserting wilayas...");
