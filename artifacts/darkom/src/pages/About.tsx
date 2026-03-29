@@ -70,7 +70,10 @@ export default function About() {
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 text-center">
         <div className="bg-secondary rounded-3xl p-12 relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('../public/images/pattern-bg.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-10 mix-blend-overlay pointer-events-none"
+            style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/pattern-bg.png)` }}
+          ></div>
           <div className="relative z-10">
             <h2 className="text-3xl font-display font-bold text-white mb-4">Rejoignez l'aventure</h2>
             <p className="text-white/80 mb-8 max-w-xl mx-auto">
