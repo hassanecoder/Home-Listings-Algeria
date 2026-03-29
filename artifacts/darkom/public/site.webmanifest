@@ -1,0 +1,21 @@
+{
+  "name": "Darkom",
+  "short_name": "Darkom",
+  "description": "Find quality furniture, home décor, and household items in Algeria. Darkom connects you with local sellers offering sofas, beds, kitchenware, and everything for your home.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#92400E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}
